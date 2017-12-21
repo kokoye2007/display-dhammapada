@@ -1,0 +1,19 @@
+Begin3
+Title:		display-dhammapada
+Version:	0.23
+Entered-date:	13AUG03
+Description:	Displays a verse from the Dhammapada.
+		Displays a random verse (a dhammapada) from the
+		Dhammapada English translation. You can put it
+		in your shell startup script.
+		URL: http://www.angelfire.com/me/rch/dd.html
+Keywords:	display-dhammapada Display_Dhammapada_Verse dp dharma Dharma Dhammapada dhammapada buddhism Buddha pali religion buddhist
+Author: 	rch@online.lt (Richard Cepas)
+Maintained-by:	rch@online.lt (Richard Cepas)
+Primary-site:	ftp.ibiblio.org /pub/Linux/apps/religion/
+                60kb display-dhammapada-0.23.tar.gz
+                1kb  display-dhammapada-0.23.lsm
+Platforms:	ANSI C
+Copying-policy:	Public Domain
+End
+

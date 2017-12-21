@@ -1,0 +1,8 @@
+#!/bin/sh
+# /etc/profile: system-wide .profile file for bash(1).
+# ~/.bash_profile: executed by bash(1) for login shells.
+# /etc/csh.login: system-wide .login file for csh(1)/tcsh(1).
+# ~/.login:
+# ~/.profile:
+
+xdp

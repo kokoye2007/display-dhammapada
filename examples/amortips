@@ -1,0 +1,6 @@
+#!/bin/sh
+set -o errexit
+test -d ~/.kde/share/apps || { echo Error: no KDE home dir; exit 1; }
+test -d ~/.kde/share/apps/amor || mkdir ~/.kde/share/apps/amor
+display-dhammapada -r all |perl -0777 -pe 's/\n\s*\n\s*\n/\n%\n/g' >~/.kde/share/apps/amor/tips
+

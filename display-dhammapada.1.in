@@ -1,0 +1,97 @@
+.\" -*- coding: UTF-8 -*-
+.DD April 13, 2003
+.TH DISPLAY-DHAMMAPADA 1  "late 20th - early 21th century"
+.SH NAME
+display-dhammapada \- display a verse from the Dhammapada
+.SH SYNOPSIS
+.B display-dhammapada
+[-r | -m | -b | -pl] [<num> | all]
+.br
+.B dp
+[-r | -m | -b | -pl] [<num> | all]
+.br
+.B xdp
+[<num>]
+.SH OPTIONS
+.TP 8
+.B -r
+Use the Richards translation (default).
+.TP 8
+.B -m
+Use the Muller translation.
+.TP 8
+.B -b
+Display corresponding verses from both translations.
+.TP 8
+.B -pl
+Use the Polish translation (default for Polish locale).
+.TP 8
+.B <num>
+Print the given number verse.
+.TP 8
+.B all
+Print all the verses.
+.P
+With no arguments a random verse is printed.
+.SH DESCRIPTION
+The Dhammapada is an anthology of 423 verses from the Kuddaka Nikaya
+part of the Theravada Pali Canon.  It contains Buddhist ethical and
+spiritual precepts.  One of the translations is by John Richards; the
+other is an older translation by F. Max Muller.
+.P
+.B display-dhammapada
+prints to the standard output.
+.P
+.B xdp
+prints using
+.B xmessage
+on an X Window screen, or in bold using
+.B tputs
+on a text terminal.
+.SH EXAMPLES
+To display a verse each time you log in on a terminal, put
+.B display-dhammapada
+or
+.B xdp
+in your
+.IR ~/.profile ,
+.I ~/.bash_profile
+or
+.IR ~/.login ,
+as appropriate for your shell.
+.P
+To display a verse each time you log in on X Window, put
+.B xdp
+in your
+.IR ~/.xsession .
+.P
+KDE has "amor" toy that can display various tips.  To use the dhammapada for that enter these commands at shell prompt:
+.LP
+.nf
+mkdir ~/.kde/share/apps/amor
+display-dhammapada -r all |perl -0777 -pe 's/\en\es*\en\es*\en/\en%\en/g' >~/.kde/share/apps/amor/tips
+
+.fi
+.\" $bash1$ display-dhammapada -r all |perl -0777 -pe 's/\n\s*\n\s*\n/\n%\n/g' >~/.kde/share/apps/amor/tips
+.Ed
+Then start amor K->Toys->Amor, right click on amor animation, select "Options" and check "Show random tips".
+.SH FILES
+.I /usr/share/display-dhammapada/dhammapada-english-transl.txt
+.br
+.I /usr/share/display-dhammapada/dhammapada-alternate.txt
+.SH "SEE ALSO"
+.BR xmessage (1),
+.BR tput (1).
+.SH BUGS
+You may found that xmessage and hence xdp is broken on XFree 4.0x if you have *international resource set.
+.SH AUTHORS
+Program: Copyright \(co 1997-2003 Richard Cepas, placed in the public domain.
+.br
+See http://www.angelfire.com/me/rch/dd.html
+.P
+Richards' English translation of the Dhammapada: Copyright (C) 1993 John
+Richards, Pembrokeshire (UK), permission granted for use here.
+See ftp://coombs.anu.edu.au/coombspapers/otherarchives/electronic-buddhist-archives/buddhism-general/e-texts/sutras-translations/dhammapada-english-transl.txt
+.P
+Muller's translation of the Dhammapada: Public Domain, used here courtesy of
+Project Gutenberg. 

@@ -1,0 +1,82 @@
+display-dhammapada (0.23)
+
+  * Added Polish translation
+
+ -- Ričardas Čepas <rch@online.lt>  Mon, 11 2003 Aug 22:12:35 +0300
+
+display-dhammapada (0.22)
+
+  * Added GTK frontend by Josh Buhl <uzs33d@uni-bonn.de>
+
+ -- Ričardas Čepas <rch@online.lt>  Sun, 13 2003 Apr 20:24:11 +0300
+
+display-dhammapada (0.21)
+
+  * Added alternative translation by F. Max Muller, thanks to David Starner <dstarner98@aasaa.ofe.org>.
+  * Added note about amor (KDE toy) to man page and examples/amortips.
+
+ -- Ričardas Čepas <rch@WriteMe.Com>  Fri, 20 2001 Apr 11:54:04 +0200
+
+display-dhammapada (0.20)
+
+  * Added manpage, thanks to Kevin Ryde <user42@zip.com.au>
+  * Splitted Debian Linux part.
+
+ -- Ricardas Cepas <rch@WriteMe.Com>  Sun Oct 10 20:21:54 CEST 1999
+
+display-dhammapada (0.19) unstable; urgency=low
+
+  * Fixed shell name in 'xdp'.
+
+ -- Ricardas Cepas <rch@WriteMe.Com>  Mon, 15 Mar 1999 18:51:58 +0100
+
+display-dhammapada (0.18) unstable; urgency=low
+
+  * xsession example moved to xdp script.
+  * Minor changes in Makefile.
+
+ -- Ricardas Cepas <rch@WriteMe.Com>  Fri, 12 Mar 1999 15:39:52 +0100
+
+display-dhammapada (0.17) unstable; urgency=low
+
+  * Minor changes in Makefile.
+  * xsession example.
+
+ -- Ricardas Cepas <rch@WriteMe.Com>  Sun, 20 Sep 1998 12:28:57 +0200
+
+display-dhammapada (0.16) frozen unstable; urgency=low
+
+  * Fixed distclean target to prevent removing of .deb by dpkg. 
+  * Added -c option to install.
+
+ -- Ricardas Cepas <rch@debian.org>  Sat, 18 Jul 1998 21:25:49 +0200
+
+display-dhammapada (0.15) unstable; urgency=low
+
+  * Rewritten Makefile.
+  * Can find a verse by number.
+
+ -- Ricardas Cepas <rch@debian.org>  Wed, 11 Mar 1998 13:47:37 +0200
+
+display-dhammapada (0.14) unstable; urgency=low
+
+  * Removed /usr/local/ from Debian binary package.
+  * Relaxed program's copying policy.
+  * Changed help message's wording.
+
+ -- Ricardas Cepas <rch@debian.org>  Thu, 15 Jan 1998 12:18:21 +0200
+
+display-dhammapada (0.12) unstable; urgency=low
+
+  * Recompiled with libc6.
+  * Minor fixes.
+  * Added example.
+
+ -- Ricardas Cepas <rch@debian.org>  Mon, 23 Jun 1997 15:10:37 +0300
+
+display-dhammapada (0.11) unstable; urgency=low
+
+  * Initial Debian release.
+
+ -- Ricardas Cepas <rch@pub.osf.lt>  Fri, 7 Feb 1997 13:14:08 +0200
+

@@ -1,0 +1,36 @@
+Summary: ${summary}
+Name: display-dhammapada
+Version: ${version}
+Release: 0
+Copyright: ${copying}
+URL: http://unicode.richard.eu.org/me/rch/dd.html
+BuildRoot: /tmp/display-dhammapada-root
+Group: Utilities/Text
+Source: ftp.ibiblio.org:/pub/Linux/apps/religion/display-dhammapada-${version}.tar.gz
+%description
+
+%prep
+%setup
+[ $RPM_BUILD_ROOT != / ] && rm -R -f $RPM_BUILD_ROOT
+
+%build
+make prefix=/usr OPT="$RPM_OPT_FLAGS" group=staff  clean all
+
+%install
+make GZIPDOCS=yes group=staff prefix=$RPM_BUILD_ROOT/usr \
+	docsdir=$RPM_BUILD_ROOT/usr/doc/display-dhammapada \
+	mandir=$RPM_BUILD_ROOT/usr/man \
+	relDATADIR=../../share/display-dhammapada \
+	owner=root group=root  install
+chown -R root.root	$RPM_BUILD_ROOT/
+chmod -R g-ws		$RPM_BUILD_ROOT/
+find $RPM_BUILD_ROOT -type f -or -type l \
+	|sed -e 's!^'"$RPM_BUILD_ROOT"'!!; s!/etc!%config &!' >filelist
+
+%files
+%files -f filelist
+%dir /usr/doc/display-dhammapada
+%dir /usr/doc/display-dhammapada/examples
+%dir /usr/share/display-dhammapada
+
+

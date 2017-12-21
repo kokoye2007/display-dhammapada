@@ -1,0 +1,12 @@
+#!/bin/sh
+# check if we are under X-Window
+if [ "$DISPLAY" != "" ] && type xmessage >/dev/null 2>&1
+then
+# type `xlsfonts' and choose your font if you are
+# getting message `cannot convert string `9x15bold' to ...'
+	xmessage -font '9x15bold' -title 'The Dhammapada' -background black -bordercolor yellow -foreground yellow -center -xrm '*maxWidth: 800' "`display-dhammapada $@`" &
+else
+	tput bold || tput md
+	display-dhammapada  "$@"
+	tput sgr0 || tput me
+fi
